@@ -1,0 +1,80 @@
+[
+  {
+    "bookId": 1,
+    "bookName": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "image": "/images/catcher-in-the-rye.jpg", 
+    "review": "A classic novel exploring themes of alienation and innocence through the eyes of Holden Caulfield. It's a poignant and thought-provoking read that captures the angst of adolescence.",
+    "totalPages": 281,
+    "rating": 4.8,
+    "category": "Classic",
+    "tags": ["Young Adult", "Fiction", "Coming-of-age"],
+    "publisher": "Little, Brown and Company",
+    "yearOfPublishing": 1951
+  },
+  {
+    "bookId": 2,
+    "bookName": "Why Do You Hate Money?",
+    "author": "Joey Percia",
+    "image": "/images/why-do-you-hate-money.jpg",
+    "review": "An insightful fitness marketing guide offering practical advice on creating compelling content and mastering sales techniques without compromising integrity. Highly recommended for fitness professionals.",
+    "totalPages": 250,
+    "rating": 4.5,
+    "category": "Marketing",
+    "tags": ["Fitness", "Business", "Marketing"],
+    "publisher": "Self-Published",
+    "yearOfPublishing": 2023
+  },
+  {
+    "bookId": 3,
+    "bookName": "The Dating Playbook for Men",
+    "author": "Andrew Tate",
+    "image": "/images/dating-playbook-for-men.jpg",
+    "review": "A controversial guide offering strategies and insights for men navigating the dating world. It aims to provide practical advice for improving dating skills and confidence.",
+    "totalPages": 300,
+    "rating": 3.5,
+    "category": "Self-help",
+    "tags": ["Dating", "Relationships", "Self-Improvement"],
+    "publisher": "Self-Published",
+    "yearOfPublishing": 2021
+  },
+  {
+    "bookId": 4,
+    "bookName": "The Scholarship Monthly Planner",
+    "author": "N/A",
+    "image": "/images/scholarship-monthly-planner.jpg",
+    "review": "A comprehensive planner designed to help students organize their scholarship applications effectively. It provides monthly layouts and tips for staying on track with deadlines.",
+    "totalPages": 150,
+    "rating": 4.2,
+    "category": "Education",
+    "tags": ["Planner", "Students", "Scholarships"],
+    "publisher": "Academic Press",
+    "yearOfPublishing": 2022
+  },
+  {
+    "bookId": 5,
+    "bookName": "Annotated Texas Family Code 2019",
+    "author": "N/A",
+    "image": "/images/texas-family-code.jpg",
+    "review": "An annotated legal text providing the Texas Family Code as of 2019, with explanatory notes and commentary. Essential for legal professionals and students in Texas.",
+    "totalPages": 700,
+    "rating": 4.0,
+    "category": "Law",
+    "tags": ["Legal", "Texas", "Family Law"],
+    "publisher": "West Academic",
+    "yearOfPublishing": 2019
+  },
+  {
+    "bookId": 6,
+    "bookName": "Spine of the Dragon",
+    "author": "Kevin J. Anderson",
+    "image": "/images/spine-of-the-dragon.jpg",
+    "review": "An epic fantasy novel filled with political intrigue, magical creatures, and a sprawling world. Readers who enjoy grand adventures and complex characters will find this engaging.",
+    "totalPages": 600,
+    "rating": 4.6,
+    "category": "Fantasy",
+    "tags": ["Fantasy", "Adventure", "Epic"],
+    "publisher": "Tor Books",
+    "yearOfPublishing": 2020
+  }
+]
