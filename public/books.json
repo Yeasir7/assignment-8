@@ -8,7 +8,7 @@
     "totalPages": 281,
     "rating": 4.8,
     "category": "Classic",
-    "tags": ["Young Adult", "Fiction", "Coming-of-age"],
+    "tags": ["Young Adult", "Fiction"],
     "publisher": "Little, Brown and Company",
     "yearOfPublishing": 1951
   },
@@ -34,7 +34,7 @@
     "totalPages": 300,
     "rating": 3.5,
     "category": "Self-help",
-    "tags": ["Dating", "Relationships", "Self-Improvement"],
+    "tags": ["Dating", "Relationships"],
     "publisher": "Self-Published",
     "yearOfPublishing": 2021
   },
