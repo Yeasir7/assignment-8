@@ -44,7 +44,7 @@ const Nav = () => {
         <ul className="flex gap-5 px-1">
           <li>
             <NavLink
-              to="/home"
+              to="/"
               className={({ isActive }) =>
                 isActive
                   ? "text-[#23BE0A] border-2 p-2 border-[#23BE0A] rounded-md"
