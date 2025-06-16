@@ -1,29 +1,71 @@
 import toast from "react-hot-toast";
 
-const getBook = () => {
-    let books = [];
-    const storedItem = localStorage.getItem("books");
-    if (storedItem) {
-      books = JSON.parse(storedItem);
-    }
-    return books;
+const getStoredBooks = (key) => {
+  let books = [];
+  const storedItem = localStorage.getItem(key);
+  if (storedItem) {
+    books = JSON.parse(storedItem);
+  }
+  return books;
 };
 
-const saveBook = (book) =>{
-    let books = getBook();
-    const isExist = books.find( b => b.id === book.id);
-    if(isExist){
-        toast.error("already exist")
-        return false;
-    }
-    books.push(book)
-    localStorage.setItem("book", JSON.stringify(books))
-    toast.success("book added successfully")
-}
+const saveBooksToStorage = (key, booksArray) => {
+  localStorage.setItem(key, JSON.stringify(booksArray));
+};
 
-const deleteBook = id =>{
-    const books = getBook();
-    const remaining = books.filter(b => b.id !== id);
-    localStorage.setItem("book", JSON.stringify(remaining));
-    toast.success("book removed")
-}
+export const saveToReadList = (book) => {
+  let readBooks = getStoredBooks("readBooks");
+  let wishlistBooks = getStoredBooks("wishlistBooks");
+
+  const isAlreadyRead = readBooks.find((b) => b.bookId === book.bookId);
+  if (isAlreadyRead) {
+    toast.error("This book is already marked as read!");
+    return false;
+  }
+
+  const isAlsoInWishlist = wishlistBooks.find((b) => b.bookId === book.bookId);
+  if (isAlsoInWishlist) {
+    wishlistBooks = wishlistBooks.filter((b) => b.bookId !== book.bookId);
+    saveBooksToStorage("wishlistBooks", wishlistBooks);
+    toast("Moved from Wishlist to Read!", { icon: "📖" });
+  }
+
+  readBooks.push(book);
+  saveBooksToStorage("readBooks", readBooks);
+  toast.success("Book added to Read list!");
+  return true;
+};
+
+export const saveToWishlist = (book) => {
+  let wishlistBooks = getStoredBooks("wishlistBooks");
+  let readBooks = getStoredBooks("readBooks");
+
+  const isAlreadyWishlisted = wishlistBooks.find(
+    (b) => b.bookId === book.bookId
+  );
+  if (isAlreadyWishlisted) {
+    toast.error("This book is already in your Wishlist!");
+    return false;
+  }
+
+  const isAlreadyRead = readBooks.find((b) => b.bookId === book.bookId);
+  if (isAlreadyRead) {
+    toast.error(
+      "This book is already marked as read and cannot be added to Wishlist."
+    );
+    return false;
+  }
+
+  wishlistBooks.push(book);
+  saveBooksToStorage("wishlistBooks", wishlistBooks);
+  toast.success("Book added to Wishlist!");
+  return true;
+};
+
+export const getReadBooks = () => {
+  return getStoredBooks("readBooks");
+};
+
+export const getWishlistBooks = () => {
+  return getStoredBooks("wishlistBooks");
+};

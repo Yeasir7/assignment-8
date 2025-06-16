@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { saveToReadList, saveToWishlist } from '../utils/index'; 
 
 const BookDetails = () => {
     const book = useLoaderData();
@@ -65,9 +66,19 @@ const BookDetails = () => {
               <p>{rating}</p>
             </div>
           </div>
-          <div className='flex gap-3 mt-4'>
-            <button className="btn">Read</button>
-            <button className="btn bg-[#50B1C9]">Wishlist</button>
+          <div className="flex gap-3 mt-4">
+            <button
+              onClick={() => saveToReadList(book)} 
+              className="btn btn-primary"
+            >
+              Read
+            </button>
+            <button
+              onClick={() => saveToWishlist(book)} 
+              className="btn btn-outline btn-secondary"
+            >
+              Wishlist
+            </button>
           </div>
         </div>
       </div>
